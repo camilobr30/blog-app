@@ -5,7 +5,7 @@ from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from blog.forms import SocialPostForm
 from blog.models import Image, SocialPost, SocialComment
 
-class HomeView(LoginRequiredMixin, View):
+class HomeView(View):
     def get(self, request, *args, **kwargs):
         logged_in_user=request.user
 
