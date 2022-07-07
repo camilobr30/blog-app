@@ -39,14 +39,15 @@
     <!-- MAIN NAV -->
     <ul x-data="{ open: false }" class="flex w-full lg:w-max items-center justify-center">
         <li class="w-1/5 md:w-max text-center">
-            <a href="#" class="w-full text-3xl py-2 px-3 xl:px-12 cursor-pointer text-center inline-block text-blue-500 border-b-4 border-blue-500">
+            <a href="{% url 'home' %}" class="w-full text-3xl py-2 px-3 xl:px-12 cursor-pointer text-center inline-block text-blue-500 border-b-4 border-blue-500">
                 <i class='bx bxs-home'></i>
             </a>
         </li>
+        {% comment "" %}
         <li class="w-1/5 md:w-max text-center">
             <a href="#" class="w-full text-3xl py-2 px-3 xl:px-12 cursor-pointer text-center inline-block rounded text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-third dark:text-dark-txt relative">
                 <i class='bx bx-movie-play'></i>
-                {% comment %} <span class="text-xs absolute top-0 right-1/4 bg-red-500 text-white font-semibold rounded-full px-1 text-center">9+</span> {% endcomment %}
+                {% comment %} <span class="text-xs absolute top-0 right-1/4 bg-red-500 text-white font-semibold rounded-full px-1 text-center">9+</span>
             </a>
         </li>
         <li class="w-1/5 md:w-max text-center">
@@ -58,7 +59,7 @@
             <a href="#" class="w-full text-3xl py-2 px-3 xl:px-12 cursor-pointer text-center inline-block rounded text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-third dark:text-dark-txt relative">
                 <i class='bx bx-group'></i>
             </a>
-        </li>
+        </li>{% endcomment %}
         <li class="w-1/5 md:w-max text-center xl:hidden md:inline-block">
             <button @click="open=true" class="w-full text-3xl py-2 px-3 xl:px-12 cursor-pointer text-center inline-block rounded text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-third dark:text-dark-txt relative">
                 <i class='bx bx-menu'></i>
